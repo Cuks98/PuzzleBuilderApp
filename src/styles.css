@@ -10,3 +10,9 @@ body{
     --hover-color: rgb(219, 169, 217);
     --white-color: white;
 }
+app-courosel{
+    width: 100%;
+}
+app-courosel2{
+    width: 100%;
+}

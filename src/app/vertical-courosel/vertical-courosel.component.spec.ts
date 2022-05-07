@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavComponent } from './nav.component';
+import { VerticalCouroselComponent } from './vertical-courosel.component';
 
-describe('NavComponent', () => {
-  let component: NavComponent;
-  let fixture: ComponentFixture<NavComponent>;
+describe('VerticalCouroselComponent', () => {
+  let component: VerticalCouroselComponent;
+  let fixture: ComponentFixture<VerticalCouroselComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavComponent ]
+      declarations: [ VerticalCouroselComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NavComponent);
+    fixture = TestBed.createComponent(VerticalCouroselComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

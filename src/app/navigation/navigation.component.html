@@ -4,10 +4,9 @@
         <h1>PuzzleBuilderApp</h1>
     </div>
     <div class="p-toolbar-group-right">
-        <a href="#">Make</a>
-        <a href="#">Browse</a>
-        <a href="#">Play</a>
-        <a href="#">About</a>
-        <span><i class="pi pi-user"></i>{{userName}}</span>
+        <a href="#" routerLink="/make">Make</a>
+        <a href="#" routerLink="/browse">Browse</a>
+        <a href="#" routerLink="/about">About</a>
+        <span (click)="login()"><i class="pi pi-user"></i>{{userName}}</span>
     </div>
 </p-toolbar>
