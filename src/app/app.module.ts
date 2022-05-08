@@ -9,6 +9,9 @@ import { CardModule } from 'primeng/card';
 import {InputTextModule} from 'primeng/inputtext';
 import { PasswordModule } from "primeng/password";
 import { DividerModule } from "primeng/divider";
+import { DialogModule } from 'primeng/dialog';
+import { CheckboxModule } from 'primeng/checkbox';
+import { DropdownModule } from 'primeng/dropdown';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -59,7 +62,10 @@ import { VerticalCouroselComponent } from './vertical-courosel/vertical-courosel
     InputTextModule,
     PasswordModule,
     DividerModule,
-    FormsModule
+    FormsModule,
+    DialogModule,
+    CheckboxModule,
+    DropdownModule
   ],
   providers: [PuzzleService],
   bootstrap: [AppComponent]

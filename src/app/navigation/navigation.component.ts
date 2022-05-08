@@ -17,5 +17,8 @@ export class NavigationComponent implements OnInit {
   login(): void{
     this.router.navigateByUrl('/login');
   }
+  welcome(): void{
+    this.router.navigateByUrl('/welcome');
+  }
 
 }

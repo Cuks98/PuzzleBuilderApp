@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuildPuzzleComponent implements OnInit {
 
-  constructor() { }
+  displayModal: boolean = false;
+  checkedBox: boolean = false;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  shareBtnClick(){
+    this.displayModal = true
+  }
+  chackBoxClick(){
+    this.checkedBox= !this.checkedBox;
+    console.log(this.checkedBox);
+    if(this.checkedBox){
+      (<HTMLDivElement>document.getElementById('publicShareOptions')).style.display="block";
+    }else{
+      (<HTMLDivElement>document.getElementById('publicShareOptions')).style.display="none";
+    }
+  
+  }
 }

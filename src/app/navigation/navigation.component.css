@@ -3,6 +3,7 @@
     background-color: rgb(221, 184, 219);
     margin: 0px;
     border: none;
+    border-radius: 0px;
 }
 :host ::ng-deep .p-toolbar-group-right a{
     display: block;
@@ -26,5 +27,8 @@
 }
 :host ::ng-deep .p-toolbar-group-right span:hover{
     background-color: var(--hover-color);
+    cursor: pointer;
+}
+#welcome:hover{
     cursor: pointer;
 }
