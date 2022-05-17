@@ -1,0 +1,6 @@
+.browseWrapper{
+    min-height:  87.3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

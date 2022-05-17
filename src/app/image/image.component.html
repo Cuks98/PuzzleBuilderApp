@@ -1,0 +1,12 @@
+<div class="image" *ngIf="imageText">
+  <div class="imageWrapper">
+    <img class="image-token desktop" [src]="path"/>
+    <!-- <img class="image-token mobile"  [src]="pathMobile" alt="user" /> -->
+  </div>
+  <div class="refreshButtonWrapper">
+    <img class='refresh' 
+       src="https://firebasestorage.googleapis.com/v0/b/puzzle-ebd10.appspot.com/o/images%2Frefresh.png?alt=media" 
+       alt="refresh"
+       (click)="refreshImage()" />
+  </div>  
+</div>

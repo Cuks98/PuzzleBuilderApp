@@ -20,5 +20,8 @@ export class NavigationComponent implements OnInit {
   welcome(): void{
     this.router.navigateByUrl('/welcome');
   }
+  cart():void{
+    this.router.navigateByUrl('/cart')
+  }
 
 }

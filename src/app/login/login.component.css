@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 85.4vh;
+    min-height: 87.3vh;
 }
 :host ::ng-deep p-card{
     width: 360px;

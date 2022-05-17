@@ -31,6 +31,14 @@ import { PuzzleService } from './puzzleService';
 import { Courosel2Component } from './courosel2/courosel2.component';
 import { FormsModule } from '@angular/forms';
 import { VerticalCouroselComponent } from './vertical-courosel/vertical-courosel.component'
+import { BoardComponent } from './board/board.component';
+import { ImageComponent } from './image/image.component';
+import { CategoryComponent } from './category/category.component';
+import { CategoryService } from './category.service';
+import { DictionaryService } from './dictionary.service';
+import { GameDBService } from './gamedb.service';
+import { GameComponent } from './game/game.component';
+import { StatsComponent } from './stats/stats.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +55,12 @@ import { VerticalCouroselComponent } from './vertical-courosel/vertical-courosel
     BrowsePuzzleComponent,
     CouroselComponent,
     Courosel2Component,
-    VerticalCouroselComponent
+    VerticalCouroselComponent,
+    BoardComponent,
+    ImageComponent,
+    CategoryComponent,
+    GameComponent,
+    StatsComponent
   ],
   imports: [
     HttpClientModule,
@@ -67,7 +80,8 @@ import { VerticalCouroselComponent } from './vertical-courosel/vertical-courosel
     CheckboxModule,
     DropdownModule
   ],
-  providers: [PuzzleService],
-  bootstrap: [AppComponent]
+  providers: [CategoryService, DictionaryService, GameDBService, PuzzleService],
+  bootstrap: [AppComponent],
+  exports: []
 })
 export class AppModule { }

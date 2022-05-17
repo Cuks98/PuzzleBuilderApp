@@ -1,0 +1,21 @@
+.refresh {
+  width: 30px;
+  height: 30px;  
+  margin: 0 5px;
+  position: relative;
+  top: 12px;
+  cursor: pointer;
+}
+.image{
+  margin: 10px auto;
+  display: flex;
+  max-width: 300px;
+  justify-content: center;
+  align-items: center;
+}
+.imageWrapper{
+  max-width: 300px;
+}
+.imageWrapper img{
+  max-width: 300px;
+}
