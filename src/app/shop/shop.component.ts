@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Puzzle } from '../puzzle';
+import { PuzzleService } from '../puzzleService';
+import {TreeNode} from 'primeng/api';
+import { lastValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-shop',
@@ -7,9 +11,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShopComponent implements OnInit {
 
-  constructor() { }
+  files!: Puzzle[];
+  val: number = 1;
 
-  ngOnInit(): void {
+  cols = [
+    { field: 'name', header: 'Name' },
+    { field: 'size', header: 'Size' },
+    { field: 'type', header: 'Type' }
+  ];
+
+  constructor(private puzzleService: PuzzleService) { }
+
+  async ngOnInit() {
+      const bla$ = this.puzzleService.getFilesystem();
+      const files = await lastValueFrom(bla$);
+      this.files = files;
+      console.log(this.files)
   }
 
 }

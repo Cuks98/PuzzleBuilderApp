@@ -39,6 +39,11 @@ import { DictionaryService } from './dictionary.service';
 import { GameDBService } from './gamedb.service';
 import { GameComponent } from './game/game.component';
 import { StatsComponent } from './stats/stats.component';
+import {TreeTableModule} from 'primeng/treetable';
+import {OrderListModule} from 'primeng/orderlist';
+import {RatingModule} from 'primeng/rating';
+import {InputNumberModule} from 'primeng/inputnumber';
+
 
 @NgModule({
   declarations: [
@@ -78,7 +83,11 @@ import { StatsComponent } from './stats/stats.component';
     FormsModule,
     DialogModule,
     CheckboxModule,
-    DropdownModule
+    DropdownModule,
+    TreeTableModule,
+    OrderListModule,
+    RatingModule,
+    InputNumberModule
   ],
   providers: [CategoryService, DictionaryService, GameDBService, PuzzleService],
   bootstrap: [AppComponent],

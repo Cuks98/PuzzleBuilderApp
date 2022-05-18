@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { TreeNode } from 'primeng/api';
+import { map, Observable } from 'rxjs';
 
 import { Puzzle } from './puzzle';
 
@@ -63,5 +64,10 @@ export class PuzzleService {
 
     getBestSelingPuzzles(): Observable<Puzzle[]> {
         return this.http.get<Puzzle[]>("../assets/puzzles-best-seling.json");
+    }
+    getFilesystem():Observable<Puzzle[]> {
+        return this.http.get<Puzzle[]>('../assets/puzzles.json').pipe(
+            map(res=>res)
+        )
     }
 }
