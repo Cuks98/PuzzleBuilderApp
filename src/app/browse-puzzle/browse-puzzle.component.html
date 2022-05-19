@@ -1,0 +1,82 @@
+<!-- <div class="browseWrapper">
+    <div class="h1Wrapper">
+        <div class="slidingShit" *ngFor="let puzzle of puzzles">
+            <h4 class="p-mb-1">{{puzzle.name}}</h4>
+            <h5 class="p-mb-1">{{puzzle.creatorName}}</h5>
+            <h6 class="p-mt-0 p-mb-3">${{puzzle.price}}</h6>
+            <img src={{puzzle.image}} alt="">
+            <div class="car-buttons p-mt-5 buttons">
+                <p-button type="button" styleClass="p-button p-button-rounded p-mr-2" icon="pi pi-search"></p-button>
+                <p-button type="button" styleClass="p-button-success p-button-rounded p-mr-2" icon="pi pi-star"></p-button>
+                <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-cog"></p-button>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="browseWrapper">
+    <div class="card">
+        <p-dataView #dv [value]="puzles" [paginator]="true" [rows]="12" filterBy="name"
+            [sortField]="sortField" [sortOrder]="sortOrder" layout="grid">
+            <ng-template pTemplate="header">
+                <div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
+                    <p-dropdown class="mr-2" [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By Price" (onChange)="onSortChange($event)" styleClass="p-mb-2 p-mb-md-0"></p-dropdown>
+                    <span class="p-input-icon-left p-mb-2 p-mb-md-0">
+                        <i class="pi pi-search"></i>
+                        <input type="search" pInputText placeholder="Search by Name" (input)="dv.filter($event.target.value)">
+                    </span>
+                    <!-- <p-dataViewLayoutOptions [style]="{'margin-inline-start': 'auto'}"></p-dataViewLayoutOptions> -->
+                </div>
+            </ng-template>
+            <ng-template let-product pTemplate="listItem">
+                <div class="p-col-12">
+                    <div class="product-list-item">
+                        <div class="product-list-detail">
+                            <div style="display: inline;"><img src="{{product.image}}"></div>
+                            <div class="product-name">{{product.name}}</div>
+                            <div class="product-description">{{product.creatorName}}</div>
+                            <p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating>
+                            <div class="">bla</div>
+                            <i class="pi pi-tag product-category-icon"></i><span class="product-category">{{product.complexity}}</span>
+                        </div>
+                        <!-- <div class="product-list-action">
+                            <span class="product-price">${{product.price}}</span>
+                            <p-button icon="pi pi-shopping-cart" label="Add to Cart" [disabled]="product.inventoryStatus === 'OUTOFSTOCK'"></p-button>
+                            <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span>
+                        </div> -->
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template let-product pTemplate="gridItem">
+                <div class="p-col-12 p-md-4">
+                    <div class="product-grid-item card" style="width: 250px;">
+                        <div class="product-grid-item-top">
+                            <div>
+                                <i class="pi pi-user product-category-icon"></i>
+                                <span class="product-category">{{product.creatorName}}</span>
+                            </div>
+                            <div class="imageWrapper">
+                                <img src="{{product.image}}" alt="">
+                            </div>
+                        </div>
+                        <div class="product-grid-item-content">
+                            <div class="product-name">{{product.name}}</div>
+                            <div class="product-description">{{product.complexity}}</div>
+                            <p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating>
+                        </div>
+                        <div class="product-description" style="text-align: center;">
+                            ${{product.price}}
+                        </div>
+                        <div class="car-buttons p-mt-5 buttons" style="display: flex; justify-content: space-evenly;margin-top: 10px">
+                            <p-button type="button" styleClass="p-button p-button-rounded p-mr-2" icon="pi pi-search"></p-button>
+                            <p-button type="button" styleClass="p-button-success p-button-rounded p-mr-2" icon="pi pi-shopping-cart"></p-button>
+                            <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-play"></p-button>
+                        </div>
+                        <!-- <div class="product-grid-item-bottom">
+                            <span class="product-price">${{product.price}}</span>
+                            <p-button icon="pi pi-shopping-cart" [disabled]="product.inventoryStatus === 'OUTOFSTOCK'"></p-button>
+                        </div> -->
+                    </div>
+                </div>
+            </ng-template>
+        </p-dataView>
+</div>

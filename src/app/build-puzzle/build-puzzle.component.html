@@ -1,0 +1,40 @@
+<div class="h2Wrapper">
+    <h2>Build your puzzle</h2>
+</div>
+<div class="buildPuzzleScreen">
+    <div class="verticalCarosel">
+        <app-vertical-courosel></app-vertical-courosel>
+    </div>
+    <div class="puzzleWrapper">
+        <img src="../../assets/images/download6.jpg" alt="">
+    </div>
+</div>
+<div class="buttonWrapper">
+    <p-button label="Restart"></p-button>
+    <p-button label="Upload"></p-button>
+    <p-button label="Share" (onClick)="shareBtnClick()"></p-button>
+</div>
+
+<p-dialog header="Share" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false">
+    <label for="name">Name:</label>
+    <input class="inputText" type="text" name="name">
+    <p-checkbox [binary]="true" inputId="binary" (onChange)="chackBoxClick()"></p-checkbox>
+    <label style="margin: 3px" for="binary">Do you want to share your puzzle publicly</label><br>
+    <div id="publicShareOptions">
+        <label for="">Tag:</label><br>
+        <select class="tagSelector" name="cars" id="cars">
+            <option value="Nature">Nature</option>
+            <option value="Gaming">Gaming</option>
+            <option value="Auto">Auto/Moto</option>
+            <option value="Movie">Movie/Tv</option>
+        </select><br>
+        <label>Price:</label><br>
+        <input class="inputText" type="number"><br>
+    </div>
+    <ng-template pTemplate="footer">
+            <p-button icon="pi pi-check" (click)="displayModal=false" label="Share" class="p-button-text"></p-button>
+    </ng-template>
+</p-dialog>
+
+

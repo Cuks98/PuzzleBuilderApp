@@ -1,0 +1,24 @@
+.game {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  min-height: 87.3vh;
+}
+app-category{
+  margin: 10px 0px!important;
+  padding: 10px 0px;
+}
+
+@media screen and (max-width: 700px) {
+
+  .game {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .game {
+    width: 100%;
+  }
+}

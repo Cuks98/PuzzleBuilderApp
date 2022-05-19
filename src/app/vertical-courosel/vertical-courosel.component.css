@@ -1,0 +1,27 @@
+:host ::ng-deep .p-carousel .p-carousel-indicators{
+    display: none;
+}
+.imageWrapper{
+    width: 100%;
+}
+.imageWrapper img{
+    width: 100%;
+}
+:host ::ng-deep .p-carousel-next{
+    background-color: var(--background-color)!important;
+}
+:host ::ng-deep .p-carousel-next:enabled:hover{
+    background-color: var(--hover-color)!important;
+}
+:host ::ng-deep .p-carousel-next:disabled:hover{
+    background-color: red!important;
+}
+:host ::ng-deep .p-carousel-prev{
+    background-color: var(--background-color)!important;
+}
+:host ::ng-deep .p-carousel-prev:enabled:hover{
+    background-color: var(--hover-color)!important;
+}
+:host ::ng-deep .p-carousel-prev:disabled:hover{
+    background-color: red!important;
+}

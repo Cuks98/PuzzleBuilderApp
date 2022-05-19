@@ -1,0 +1,13 @@
+<!-- <p>navigation works!</p> -->
+<p-toolbar>
+    <div class="p-toolbar-group-left">
+        <h1 id="welcome" (click)="welcome()">PuzzleBuilderApp</h1>
+    </div>
+    <div class="p-toolbar-group-right">
+        <a href="#" routerLink="/make">Make</a>
+        <a href="#" routerLink="/browse">Browse</a>
+        <a href="#" routerLink="/about">About</a>
+        <span (click)="login()"><i class="pi pi-user"></i>{{userName}}</span>
+        <span (click)="cart()" style="padding: 22px 10px"><i class="pi pi-shopping-cart"></i></span>
+    </div>
+</p-toolbar>

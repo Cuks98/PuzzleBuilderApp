@@ -1,0 +1,33 @@
+<div class="pCardWrapper">
+    <p-card header="Register" styleClass="p-card-shadow">
+        <div class="inputWrapper">
+            <form>
+                <label class="label" for="username">Username:</label>
+                <input name="username" type="text" placeholder="Username" pInputText>
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="Email" pInputText>
+                <label for="password">Password:</label>
+                <p-password placeholder="Password" [toggleMask]="true" [(ngModel)]="value4" name="password">
+                    <ng-template pTemplate="header">
+                        <h6>Pick a password</h6>
+                    </ng-template>
+                    <ng-template pTemplate="footer">
+                        <p-divider></p-divider>
+                        <p class="mt-2">Suggestions</p>
+                        <ul class="pl-2 ml-2 mt-0" style="line-height: 1.5">
+                            <li>At least one lowercase</li>
+                            <li>At least one uppercase</li>
+                            <li>At least one numeric</li>
+                            <li>Minimum 8 characters</li>
+                        </ul>
+                    </ng-template>
+                </p-password>
+                <label for="confirmPass">Confirm password:</label>
+                <input name="confirmPass" type="password" placeholder="Confirm password" pInputText>
+            </form>
+        </div>
+        <div class="buttonWrapper">
+            <p-button label="Register" (onClick)="register()"></p-button>
+        </div>
+    </p-card>
+</div>

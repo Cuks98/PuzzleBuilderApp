@@ -1,0 +1,65 @@
+.browseWrapper{
+    min-height:  87.5vh;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+:host ::ng-deep .p-orderList{
+    min-width: 80%;
+}
+.imageWrapper{
+    max-width: 200px;
+}
+.imageWrapper img{
+    max-width: 200px;
+}
+:host ::ng-deep .p-orderlist .p-orderlist-list .p-orderlist-item{
+    display: flex;
+    justify-content: space-between;
+}
+:host ::ng-deep .product-item{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+}
+.product-list-action{
+    width: 100%;
+    text-align: left;
+    align-items: left;
+    justify-content: left;
+    display: flex;
+}
+:host ::ng-deep .p-button{
+    background-color: var(--background-color)!important;
+    border-color: var(--background-color);
+}
+:host ::ng-deep .p-button:hover{
+    background-color: var(--hover-color)!important;
+    border-color: var(--hover-color);
+}
+:host ::ng-deep .p-button:focus{
+    box-shadow: none;
+}
+.x{
+    padding: 10px;
+}
+:host ::ng-deep .product-item .p-inputtext{
+    width: 50px;
+}
+:host ::ng-deep .p-orderlist-controls{
+    display: none!important;
+}
+.chaeckOutWrapper{
+    display: flex;
+    justify-content: end;
+    background: #f8f9fa;
+    color: #495057;
+    border: 1px solid #dee2e6;
+    padding: 1rem;
+    border-top: 0 none;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}

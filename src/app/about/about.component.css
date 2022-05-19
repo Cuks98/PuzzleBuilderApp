@@ -1,0 +1,40 @@
+.wrapper{
+    min-height: 87.5vh;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+.firstWrapper{
+    width: 45%;
+}
+.secondWrapper{
+    width: 45%;
+    padding: 0.5rem;
+    margin: 10px 0px;
+}
+.firstWrapper div{
+    padding: 0.5rem;
+    margin: 10px 0px;
+}
+.firstWrapper div h2{
+    margin-bottom: 5px;
+}
+.firstWrapper div p{
+    margin-bottom: 5px;
+}
+.firstWrapper div img{
+    margin-top: 5px;
+}
+.secondWrapper h2{
+    margin-bottom: 5px;
+}
+.secondWrapper img{
+    margin-top: 5px;
+    max-width: 50%;
+}
+.imageWrapper{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

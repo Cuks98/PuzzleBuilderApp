@@ -1,0 +1,53 @@
+.pCardWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 87.3vh;
+}
+:host ::ng-deep p-card{
+    width: 360px;
+}
+:host ::ng-deep .p-inputtext{
+    width: 100%!important;
+    margin: 5px 0px;
+}
+:host ::ng-deep .p-password{
+    width: 100%;
+    margin: 5px 0px;
+}
+.linkWrapper{
+    text-align: center;
+    padding: 10px 0px;
+}
+label{
+    display: block;
+    margin-bottom: 3px;
+}
+.linkWrapper a{
+    display: block;
+    margin-bottom: 3px;
+}
+.linkWrapper a:visited{
+    color: blue;
+}
+.buttonWrapper{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0px;
+}
+:host ::ng-deep .buttonWrapper .p-button{
+    background-color: var(--background-color);
+    border-color: var(--background-color);
+    min-width: 120px;
+}
+:host ::ng-deep .buttonWrapper .p-button:hover{
+    background-color: var(--hover-color);
+    border-color: var(--hover-color);
+}
+@media screen and (max-width: 380px) {
+    :host ::ng-deep p-card{
+        max-width: 100%!important;
+        width: 100%;
+    } 
+}

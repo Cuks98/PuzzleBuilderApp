@@ -1,0 +1,19 @@
+<div class="pCardWrapper">
+    <p-card header="Login" styleClass="p-card-shadow">
+        <div class="inputWrapper">
+            <form>
+                <label for="username">Username:</label><br>
+                <input name="username" type="text" placeholder="Username" id="username" pInputText>
+                <label for="password">Password:</label><br>
+                <p-password [toggleMask]="true" [feedback]="false" [(ngModel)]="value4" name="password" placeholder="Password" id="password"></p-password>
+            </form>
+        </div>
+        <div class="linkWrapper">
+            <a href="#">Forrgot password?</a>
+            <a href="#" routerLink="/register">Need an account?</a>
+        </div>
+        <div class="buttonWrapper">
+            <p-button label="Login" (onClick)="login()"></p-button>
+        </div>
+    </p-card>
+</div>
